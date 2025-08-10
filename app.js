@@ -25,8 +25,9 @@ function sortearAmigo(){
 }
 
 function mostrarVencedor(vencedor){
-    document.getElementById("resultado").innerHTML = "O amigo sorteado foi o " + vencedor;
-    console.log(vencedor);
+            var resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = "O amigo sorteado foi o <strong>" + vencedor + "</strong>";
+            resultadoDiv.style.display = "block";
 }
 
 
