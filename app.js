@@ -2,7 +2,7 @@ let listaAmigos = [];
 
 function adicionarAmigo(){
     var amigo = document.getElementById("amigo").value;
-
+    document.querySelector("#amigo").value = "";
     if(amigo){
     listaAmigos.push(amigo);
     atualizarLista(amigo);
@@ -20,7 +20,6 @@ function atualizarLista(amigo){
 
 function sortearAmigo(){
     var i = parseInt(Math.random() * listaAmigos.length);
-    console.log(i);
     mostrarVencedor(listaAmigos[i]);
 }
 
@@ -29,5 +28,3 @@ function mostrarVencedor(vencedor){
             resultadoDiv.innerHTML = "O amigo sorteado foi o <strong>" + vencedor + "</strong>";
             resultadoDiv.style.display = "block";
 }
-
-
